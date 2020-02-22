@@ -42,10 +42,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.dpm.nsrm.bkg.evt=3955 \
     ro.vendor.use_data_netmgrd=true
 
-# Ccodec
+# Codec 2.0
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.stagefright.omx_default_rank.sw-audio=1 \
-    debug.stagefright.omx_default_rank=0
+    debug.media.codec2=2 \
+    debug.stagefright.c2inputsurface=-1 \
+    debug.stagefright.ccodec=4 \
+    debug.stagefright.omx_default_rank=512 \
+    vendor.media.omx=0
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -80,10 +83,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so
 
-# Qualcomm / OEM Unlock
+# OEM Unlock
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.oem_unlock_supported=1 \
-    ro.vendor.qti.va_aosp.support=1
+    ro.oem_unlock_supported=1
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
